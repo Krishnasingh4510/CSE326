@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to CSS -->
+    <link rel="Stylesheet" href="style.css">
+     <!-- Box Icons -->.
+     <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+     <style>
+        
+     </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="project logo.png" alt=""; ></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Ride.html">Ride</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="about1.html">About</a></li>
+            <li><a href="reviews1.html">Reviews</a></li>
+
+        </ul>
+        <div class="header-btn">
+            <a href="#" class="sign-up">Sign Up</a>
+            <a href="#" class="sign-in">Sign In</a>
+        </div>
+
+     </header>
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            <h1>Explore Out Top Deals <br> From Top Rated Dealers</h1>
+        </div>
+        <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="honda civic.jpg" alt=""; width="500px">
+            </div>
+            <p>2017</p>
+            <h3>2018 Honda Civic</h3>
+            <h2>$58500 | $358 <span>/month</span></h2>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="creta.jpg" alt=""; width="500px">
+        </div>
+        <p>2017</p>
+        <h3>2018 Hyundai Creta</h3>
+        <h2>$45500 | $358 <span>/month</span></h2>
+        <a href="#" class="btn">Rent Now</a>
+    </div>
+
+    <div class="box">
+        <div class="box-img">
+            <img src="scorpio.jpg" alt=""; width="500px">
+    </div>
+    <p>2017</p>
+    <h3>2018 Mahindra Scorpio</h3>
+    <h2>$61500 | $358 <span>/month</span></h2>
+    <a href="#" class="btn">Rent Now</a>
+</div>
+
+<div class="box">
+    <div class="box-img">
+        <img src="ertiga.jpg" alt=""; width="500px">
+</div>
+<p>2017</p>
+<h3>2019 Suzuki Ertiga</h3>
+<h2>$51500 | $358 <span>/month</span></h2>
+<a href="#" class="btn">Rent Now</a>
+</div>
+
+<div class="box">
+<div class="box-img">
+    <img src="land cruiser.jpg" alt=""; width="500px">
+</div>
+<p>2017</p>
+<h3>2019 Toyota Land Cruiser</h3>
+<h2>$78500 | $658 <span>/month</span></h2>
+<a href="#" class="btn">Rent Now</a>
+</div>
+<div class="box">
+<div class="box-img">
+    <img src="Innova crysta.jpg" alt=""; width="500px">
+</div>
+<p>2017</p>
+<h3>2019 Toyota Innova Crysta</h3>
+<h2>$78500 | $658 <span>/month</span></h2>
+<a href="#" class="btn">Rent Now</a>
+</div>
+<div class="box">
+<div class="box-img">
+    <img src="audi Q3.jpg" alt=""; width="500px">
+</div>
+<p>2017</p>
+<h3>2019 Audi Q3</h3>
+<h2>$78500 | $658 <span>/month</span></h2>
+<a href="#" class="btn">Rent Now</a>
+</div>
+
+<div class="box">
+<div class="box-img">
+    <img src="bmw 220d.jpg" alt=""; width="500px">
+</div>
+<p>2017</p>
+<h3>2019 BMW 220D</h3>
+<h2>$78500 | $658 <span>/month</span></h2>
+<a href="#" class="btn">Rent Now</a>
+</div>
+
+        </div>
+    </section>
+    <!-- NewsLetter-->
+    <section class="newsletter">
+        <h2>Subscribe To NewsLetter</h2>
+        <div class="box">
+            <input type="text" placeholder="Enter Your Email...">
+            <a href="#" class="btn">Subscribe</a>
+        </div>
+       </section>
+       <div class="copyright">
+        <p>&#169; Devanshu - All Right Reserved</p>
+        <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+        </div>
+       </div>
+    <!-- Link To JS -->
+ <script src="main.js"></script>
+ <script>
+   function navigate(pageId) {
+    const currentPage = document.querySelector('.page.show');
+    const nextPage = document.getElementById(pageId);
+
+    if (currentPage) {
+        currentPage.classList.remove('show'); // Start fade out
+        setTimeout(() => {
+            currentPage.style.display = 'none'; // Hide after fade out
+            nextPage.style.display = 'block'; // Show next page
+            setTimeout(() => {
+                nextPage.classList.add('show'); // Start fade in
+            }, 20); // Delay for CSS transition
+        }, 500); // Match duration of CSS transition
+    } else {
+        nextPage.style.display = 'block'; // Show next page if no current page
+        setTimeout(() => {
+            nextPage.classList.add('show'); // Start fade in
+        }, 20);
+    }
+}
+
+
+ </script>
+</body>
+</html>

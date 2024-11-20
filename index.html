@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <!-- Link to CSS -->
+    <link rel="Stylesheet" href="style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page.show {
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <header>
+        <a href="#" class="logo"><img src="project logo.png" alt=""; ></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Ride.html">Ride</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="about1.html">About</a></li>
+            <li><a href="reviews1.html">Reviews</a></li>
+
+        </ul>
+        <div class="header-btn">
+            <a href="#" class="sign-up">Sign Up</a>
+            <a href="#" class="sign-in">Sign In</a>
+        </div>
+
+     </header>
+     <!-- Home -->
+      <section class="home" id="home">
+        <div class="text">
+            <h1><span>Looking</span> to <br>rent a car</h1>
+            <p>Great cars at great prices, from the biggest car rental companies.</p>
+            <div class="app-stores">
+                <img src="app store.png" alt="">
+                <img src="play store.png" alt="">
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="">
+                <div class="input-box">
+                    <span>Location</span>
+                    <input type="search" name="" placeholder="Search Places">
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <input type="submit" name="" id="" class="btn">
+            </form>
+        </div>
+      </section>
+      
+          
+          <!-- NewsLetter-->
+           <section class="newsletter">
+            <h2>Subscribe To NewsLetter</h2>
+            <div class="box">
+                <input type="text" placeholder="Enter Your Email...">
+                <a href="#" class="btn">Subscribe</a>
+            </div>
+           </section>
+           <div class="copyright">
+            <p>&#169; Devanshu - All Right Reserved</p>
+            <div class="social">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+            </div>
+           </div>
+        <!-- Link To JS -->
+     <script src="main.js"></script>
+     <script>
+        function navigate(pageId) {
+    const currentPage = document.querySelector('.page.show');
+    const nextPage = document.getElementById(pageId);
+
+    if (currentPage) {
+        currentPage.classList.remove('show'); // Start fade out
+        setTimeout(() => {
+            currentPage.style.display = 'none'; // Hide after fade out
+            nextPage.style.display = 'block'; // Show next page
+            setTimeout(() => {
+                nextPage.classList.add('show'); // Start fade in
+            }, 20); // Delay for CSS transition
+        }, 500); // Match duration of CSS transition
+    } else {
+        nextPage.style.display = 'block'; // Show next page if no current page
+        setTimeout(() => {
+            nextPage.classList.add('show'); // Start fade in
+        }, 20);
+    }
+}
+
+     </script>
+</body>
+</html>

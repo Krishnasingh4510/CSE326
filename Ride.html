@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to CSS -->
+    <link rel="Stylesheet" href="ride.css">
+    <!-- Box Icons -->.
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="project logo.png" alt="" ;></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Ride.html">Ride</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="about1.html">About</a></li>
+            <li><a href="reviews1.html">Reviews</a></li>
+
+        </ul>
+        <div class="header-btn">
+            <a href="#" class="sign-up">Sign Up</a>
+            <a href="#" class="sign-in">Sign In</a>
+        </div>
+    </header>
+    <div class="mainride">
+
+        <section class="ride" id="ride">
+            <div class="heading">
+                <span>How Its Work</span>
+                <h1>Rent With 3 Easy Steps</h1>
+            </div>
+            <div class="ride-container">
+                <div class="box">
+                    <i class='bx bxs-map'></i>
+                    <h2>Choose A Location</h2>
+                    <p>Your choices, Our humble service.
+                        </p>
+                </div>
+    
+                <div class="box">
+                    <i class='bx bx-calendar-check'></i>
+                    <h2>Pick-Up Date</h2>
+                    <p>Any time you wish, a smooth ride at your fingertips.
+                        </p>
+                </div>
+    
+                <div class="box">
+                    <i class='bx bx-calendar-star'></i>
+                    <h2>Book A Car</h2>
+                    <p>The prices are reasonable for a service so priceless.
+                        </p>
+                </div>
+            </div>
+        </section>
+        <!-- NewsLetter -->
+        <section class="newsletter">
+            <h2>Subscribe To NewsLetter</h2>
+            <div class="box">
+                <input type="text" placeholder="Enter Your Email...">
+                <a href="#" class="btn">Subscribe</a>
+            </div>
+        </section>
+        <div class="copyright">
+            <p>&#169; Devanshu - All Right Reserved</p>
+            <div class="social">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Link To JS -->
+    <script src="main.js"></script>
+    <script>
+        function navigate(pageId) {
+    const currentPage = document.querySelector('.page.show');
+    const nextPage = document.getElementById(pageId);
+
+    if (currentPage) {
+        currentPage.classList.remove('show'); // Start fade out
+        setTimeout(() => {
+            currentPage.style.display = 'none'; // Hide after fade out
+            nextPage.style.display = 'block'; // Show next page
+            setTimeout(() => {
+                nextPage.classList.add('show'); // Start fade in
+            }, 20); // Delay for CSS transition
+        }, 500); // Match duration of CSS transition
+    } else {
+        nextPage.style.display = 'block'; // Show next page if no current page
+        setTimeout(() => {
+            nextPage.classList.add('show'); // Start fade in
+        }, 20);
+    }
+}
+
+     </script>
+</body>
+
+</html>
